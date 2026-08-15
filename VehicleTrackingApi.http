@@ -1,0 +1,63 @@
+@baseUrl = http://localhost:5041
+
+### Véhicules
+
+GET {{baseUrl}}/api/vehicules
+
+###
+
+GET {{baseUrl}}/api/vehicules/1
+
+###
+
+POST {{baseUrl}}/api/vehicules
+Content-Type: application/json
+
+{
+  "immatriculation": "1234 TAA"
+}
+
+###
+
+PUT {{baseUrl}}/api/vehicules/1
+Content-Type: application/json
+
+{
+  "immatriculation": "5678 TBB"
+}
+
+###
+
+DELETE {{baseUrl}}/api/vehicules/1
+
+### Positions GPS
+
+POST {{baseUrl}}/api/positions
+Content-Type: application/json
+
+{
+  "vehiculeId": 1,
+  "latitude": -18.879,
+  "longitude": 47.507,
+  "datePosition": "2026-06-14T10:00:00"
+}
+
+###
+
+GET {{baseUrl}}/api/positions
+
+### Historique
+
+GET {{baseUrl}}/api/vehicules/1/historique
+
+###
+
+GET {{baseUrl}}/api/vehicules/1/historique?dateDebut=2026-06-01&dateFin=2026-06-30
+
+### Statistiques
+
+GET {{baseUrl}}/api/vehicules/1/distance
+
+###
+
+GET {{baseUrl}}/api/vehicules/1/zones
